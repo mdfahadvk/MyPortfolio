@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Mohammed Fahad</title>
+  <meta name="description" content="Thank you for your enquiry. Mohammed Fahad will get back to you shortly." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .thanks-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .thanks-card {
+      width: min(720px, 92vw);
+      background: linear-gradient(180deg, rgba(22, 34, 56, 0.9), rgba(16, 27, 44, 0.94));
+      border: 1px solid rgba(90, 188, 255, 0.35);
+      border-radius: 16px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .thanks-card h1 {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .thanks-card p {
+      max-width: 58ch;
+      margin-inline: auto;
+    }
+
+    .thanks-actions {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 0.7rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="thanks-wrap">
+    <section class="thanks-card" aria-labelledby="thanks-title">
+      <p class="eyebrow">Message Received</p>
+      <h1 id="thanks-title">Thank you for reaching out.</h1>
+      <p>Your enquiry has been submitted successfully. I will review your details and get back to you shortly.</p>
+      <div class="thanks-actions">
+        <a class="btn btn-primary" href="index.html#home">Back to Home</a>
+        <a class="btn btn-secondary" href="index.html#projects">View My Work</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
