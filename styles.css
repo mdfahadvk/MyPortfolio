@@ -447,29 +447,36 @@ ul {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.3fr 0.95fr;
+  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-areas:
+    "profile about"
+    "skills skills";
   gap: 1rem;
   align-items: start;
 }
 
 .profile-panel {
+  grid-area: profile;
   margin: 0;
   justify-self: center;
-  width: min(100%, 320px);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(22, 34, 56, 0.86), rgba(16, 27, 44, 0.92));
-  overflow: hidden;
-  height: fit-content;
+  align-self: center;
+  width: min(100%, 300px);
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  height: auto;
 }
 
 .profile-panel img {
   width: 100%;
   height: auto;
   min-height: 0;
-  aspect-ratio: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
+  border-radius: 50%;
+  border: 2px solid rgba(90, 188, 255, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .about-content p + p {
@@ -477,7 +484,12 @@ ul {
 }
 
 .skills-panel {
+  grid-area: skills;
   padding: 1.2rem;
+}
+
+.about-content {
+  grid-area: about;
 }
 
 .skills-panel ul {
@@ -647,11 +659,10 @@ ul {
   }
 
   .about-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .skills-panel {
-    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas:
+      "profile about"
+      "skills skills";
   }
 
   .hero-visual {
@@ -705,6 +716,13 @@ ul {
   .contact-form,
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-areas:
+      "profile"
+      "about"
+      "skills";
   }
 
   .tag {
